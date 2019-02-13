@@ -3,6 +3,7 @@
         "description": "add numbers A plus B",
         "input": "dictionary{A: number, B: number}",
         "output": "number",
+        "name": "add two numbers",
         "tests": [
             {
                 "input": {
@@ -31,6 +32,7 @@
         "description": "output all odd numbers between Start and End (inclusive)",
         "input": "dictionary{Start: number, End: number}",
         "output": "list[numbers...]",
+        "name": "output odd numbers",
         "tests": [
             {
                 "input": {
@@ -75,6 +77,7 @@
         "description": "calculate numbers using +, -, *, and /. Two numbers will be given, then an operation. Perform that operation on the numbers. Another number and operator will be given. Perform that operataion on the previous output and the new number.",
         "input": "list[number, number, string, number, string, number, string...]",
         "output": "number",
+        "name": "rpn calculator",
         "tests": [
             {
                 "input": [
@@ -112,6 +115,7 @@
         "description": "calculate numbers using +, -, *, and / following the order of operations",
         "input": "string\"number + number * number...\"",
         "output": "number",
+        "name": "calculator",
         "tests": [
             {
                 "input": "1 + 1",
