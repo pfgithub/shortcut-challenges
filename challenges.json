@@ -1,4 +1,5 @@
 {
+    "_list": ["add two numbers", "output odd numbers", "rpn calculator", "calculator"],
     "add two numbers": {
         "description": "add numbers A plus B",
         "input": "dictionary{A: number, B: number}",
