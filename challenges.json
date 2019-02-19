@@ -140,11 +140,11 @@
 			}
 		]
 	},
-	"alternating high low numbers": {
+	"alternating high low": {
 		"description": "within range Low to High, alternate taking the lowest number. then the highest, then the second lowest... until you are out of numbers.",
 		"input": "dictionary{Low: number, High: number}",
 		"output": "list[number Lowest, number Highest, number Second Lowest, ...]",
-		"name": "alternating high low numbers",
+		"name": "alternating high low",
 		"tests": [
 			{
 				"input": {"Low": 5, "High": 10},
