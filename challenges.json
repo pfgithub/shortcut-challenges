@@ -5,7 +5,9 @@
 		"rpn calculator",
 		"calculator",
 		"fizzbuzz",
-		"hex to rgb"
+		"hex to rgb",
+		"alternating high low",
+		"compare version numbers"
 	],
 	"_initialshortcut": "YnBsaXN0MDDXAQIDBAUGBwgJChESGh1fEBdXRldvcmtmbG93Q2xpZW50VmVyc2lvbl8QF1dGV29ya2Zsb3dDbGllbnRSZWxlYXNlXldGV29ya2Zsb3dJY29uXxAZV0ZXb3JrZmxvd0ltcG9ydFF1ZXN0aW9uc18QEVdGV29ya2Zsb3dBY3Rpb25zXxAPV0ZXb3JrZmxvd1R5cGVzXxAhV0ZXb3JrZmxvd0lucHV0Q29udGVudEl0ZW1DbGFzc2VzVTc1NC4yVTIuMS4z0wsMDQ4PEF8QGFdGV29ya2Zsb3dJY29uU3RhcnRDb2xvcl8QF1dGV29ya2Zsb3dJY29uSW1hZ2VEYXRhXxAZV0ZXb3JrZmxvd0ljb25HbHlwaE51bWJlchK0sqn/QBHod6ChE9IUFRYXXxAaV0ZXb3JrZmxvd0FjdGlvbklkZW50aWZpZXJfEBpXRldvcmtmbG93QWN0aW9uUGFyYW1ldGVyc18QG2lzLndvcmtmbG93LmFjdGlvbnMuY29tbWVudNEYGV8QE1dGQ29tbWVudEFjdGlvblRleHRcQ29kZSBoZXJlLi4uohscWE5DV2lkZ2V0WFdhdGNoS2l0rxARHh8gISIjJCUmJygpKissLS5fEBhXRkFwcFN0b3JlQXBwQ29udGVudEl0ZW1fEBRXRkFydGljbGVDb250ZW50SXRlbV8QFFdGQ29udGFjdENvbnRlbnRJdGVtXxARV0ZEYXRlQ29udGVudEl0ZW1fEBlXRkVtYWlsQWRkcmVzc0NvbnRlbnRJdGVtXxAYV0ZHZW5lcmljRmlsZUNvbnRlbnRJdGVtXxASV0ZJbWFnZUNvbnRlbnRJdGVtXxAaV0ZpVHVuZXNQcm9kdWN0Q29udGVudEl0ZW1fEBVXRkxvY2F0aW9uQ29udGVudEl0ZW1fEBdXRkRDTWFwc0xpbmtDb250ZW50SXRlbV8QFFdGQVZBc3NldENvbnRlbnRJdGVtXxAQV0ZQREZDb250ZW50SXRlbV8QGFdGUGhvbmVOdW1iZXJDb250ZW50SXRlbV8QFVdGUmljaFRleHRDb250ZW50SXRlbV8QGldGU2FmYXJpV2ViUGFnZUNvbnRlbnRJdGVtXxATV0ZTdHJpbmdDb250ZW50SXRlbV8QEFdGVVJMQ29udGVudEl0ZW0ACAAXADEASwBaAHYAigCcAMAAxgDMANMA7gEIASQBKQEqAS0BLgEwATUBUgFvAY0BkAGmAbMBtgG/AcgB3AH3Ag4CJQI5AlUCcAKFAqICugLUAusC/gMZAzEDTgNkAAAAAAAAAgEAAAAAAAAALwAAAAAAAAAAAAAAAAAAA3c=",
 	"add two numbers": {
@@ -135,6 +137,74 @@
 			{
 				"input": "#f56a32",
 				"output": [ 245, 106, 50 ]
+			}
+		]
+	},
+	"alternating high low numbers": {
+		"description": "within range Low to High, alternate taking the lowest number. then the highest, then the second lowest... until you are out of numbers.",
+		"input": "dictionary{Low: number, High: number}",
+		"output": "list[number Lowest, number Highest, number Second Lowest, ...]",
+		"name": "alternating high low numbers",
+		"tests": [
+			{
+				"input": {"Low": 5, "High": 10},
+				"output": [ 5, 10, 6, 9, 7, 8 ]
+			},
+			{
+				"input": {"Low": -1, "High": 5},
+				"output": [ -1, 5, 0, 4, 1, 3, 2 ]
+			},
+			{
+				"input": {"Low": 2, "High": 3},
+				"output": [ 2, 3 ]
+			},
+			{
+				"input": {"Low": 8, "High": 8},
+				"output": [ 8 ]
+			}
+		]
+	},
+	"compare version numbers": {
+		"description": "compare x.y.z... style version numbers. Output 1 if A is greater and -1 if B is greater. Output 0 if they are the same. For example, 1.0.0 > 0.1 and 2 > 1.0.5.9.3. See tests for more examples.",
+		"input": "dictionary{A: string, B: string}",
+		"output": "number",
+		"name": "compare version numbers",
+		"tests": [
+			{
+				"input": {"A": "1", "B": "2"},
+				"output": -1
+			},
+			{
+				"input": {"A": "1.0.1.8", "B": "1.0.2.1.6"},
+				"output": -1
+			},
+			{
+				"input": {"A": "5.7", "B": "6"},
+				"output": -1
+			},
+			{
+				"input": {"A": "1", "B": "1.0"},
+				"output": 0
+			},
+			{
+				"input": {"A": "1.9.2.0.1", "B": "1.9.2.0.1.0"},
+				"output": 0
+			},
+			{
+				"input": {"A": "5.7.0.0.0", "B": "5.7"},
+				"output": 0
+			},
+			{
+				"input": {"A": "2", "B": "1"},
+				"output": 1
+			},
+			{
+				"input": {"A": "1.9.2.0.1.1", "B": "1.9.2.0.1.0"},
+				"output": 1
+			},
+			{
+				"input": {"A": "5.7.0.0.0.1", "B": "5.7"},
+				"output": 1
 			}
 		]
 	}
