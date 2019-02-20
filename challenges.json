@@ -1,4 +1,4 @@
-{
+113{
 	"_list": [
 		"add two numbers",
 		"output odd numbers",
@@ -222,7 +222,7 @@
 		]
 	},
 	"sort numbers": {
-		"description": "sort a list of numbers in order from lowerst to highest",
+		"description": "sort a list of positive integer numbers in order from lowerst to highest",
 		"input": "list[numbers...]",
 		"output": "list[numbers...]",
 		"name": "sort numbers",
