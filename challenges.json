@@ -239,7 +239,7 @@
 		]
 	},
 	"decimal to binary": {
-		"description": "convert a number from base 10 (decimal) to base 2 (binary) with no extra zeroes. also, support numbers with decimal points... good luck",
+		"description": "convert a number from base 10 (decimal) to base 2 (binary) with no extra zeroes. also, support negative numbers and numbers with decimal points. good luck",
 		"input": "number",
 		"output": "string",
 		"name": "decimal to binary",
@@ -251,6 +251,10 @@
 			{
 				"input": 63,
 				"output": "111111"
+			},
+			{
+				"input": -3,
+				"output": "-11"
 			},
 			{
 				"input": 9.25,
