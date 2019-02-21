@@ -8,7 +8,8 @@
 		"hex to rgb",
 		"alternating high low",
 		"compare version numbers",
-		"sort numbers"
+		"sort numbers",
+		"decimal to binary"
 	],
 	"_initialshortcut": "YnBsaXN0MDDXAQIDBAUGBwgJChESGh1fEBdXRldvcmtmbG93Q2xpZW50VmVyc2lvbl8QF1dGV29ya2Zsb3dDbGllbnRSZWxlYXNlXldGV29ya2Zsb3dJY29uXxAZV0ZXb3JrZmxvd0ltcG9ydFF1ZXN0aW9uc18QEVdGV29ya2Zsb3dBY3Rpb25zXxAPV0ZXb3JrZmxvd1R5cGVzXxAhV0ZXb3JrZmxvd0lucHV0Q29udGVudEl0ZW1DbGFzc2VzVTc1NC4yVTIuMS4z0wsMDQ4PEF8QGFdGV29ya2Zsb3dJY29uU3RhcnRDb2xvcl8QF1dGV29ya2Zsb3dJY29uSW1hZ2VEYXRhXxAZV0ZXb3JrZmxvd0ljb25HbHlwaE51bWJlchK0sqn/QBHod6ChE9IUFRYXXxAaV0ZXb3JrZmxvd0FjdGlvbklkZW50aWZpZXJfEBpXRldvcmtmbG93QWN0aW9uUGFyYW1ldGVyc18QG2lzLndvcmtmbG93LmFjdGlvbnMuY29tbWVudNEYGV8QE1dGQ29tbWVudEFjdGlvblRleHRcQ29kZSBoZXJlLi4uohscWE5DV2lkZ2V0WFdhdGNoS2l0rxARHh8gISIjJCUmJygpKissLS5fEBhXRkFwcFN0b3JlQXBwQ29udGVudEl0ZW1fEBRXRkFydGljbGVDb250ZW50SXRlbV8QFFdGQ29udGFjdENvbnRlbnRJdGVtXxARV0ZEYXRlQ29udGVudEl0ZW1fEBlXRkVtYWlsQWRkcmVzc0NvbnRlbnRJdGVtXxAYV0ZHZW5lcmljRmlsZUNvbnRlbnRJdGVtXxASV0ZJbWFnZUNvbnRlbnRJdGVtXxAaV0ZpVHVuZXNQcm9kdWN0Q29udGVudEl0ZW1fEBVXRkxvY2F0aW9uQ29udGVudEl0ZW1fEBdXRkRDTWFwc0xpbmtDb250ZW50SXRlbV8QFFdGQVZBc3NldENvbnRlbnRJdGVtXxAQV0ZQREZDb250ZW50SXRlbV8QGFdGUGhvbmVOdW1iZXJDb250ZW50SXRlbV8QFVdGUmljaFRleHRDb250ZW50SXRlbV8QGldGU2FmYXJpV2ViUGFnZUNvbnRlbnRJdGVtXxATV0ZTdHJpbmdDb250ZW50SXRlbV8QEFdGVVJMQ29udGVudEl0ZW0ACAAXADEASwBaAHYAigCcAMAAxgDMANMA7gEIASQBKQEqAS0BLgEwATUBUgFvAY0BkAGmAbMBtgG/AcgB3AH3Ag4CJQI5AlUCcAKFAqICugLUAusC/gMZAzEDTgNkAAAAAAAAAgEAAAAAAAAALwAAAAAAAAAAAAAAAAAAA3c=",
 	"add two numbers": {
@@ -234,6 +235,26 @@
 			{
 				"input": [9, 4, 7, 23, 1, 4],
 				"output": [ 1, 4, 4, 7, 9, 23 ]
+			}
+		]
+	},
+	"decimal to binary": {
+		"description": "convert a number from base 10 (decimal) to base 2 (binary) with no extra zeroes. also, support numbers with decimal points... good luck",
+		"input": "number",
+		"output": "string",
+		"name": "decimal to binary",
+		"tests": [
+			{
+				"input": 25,
+				"output": "11001"
+			},
+			{
+				"input": 63,
+				"output": "111111"
+			},
+			{
+				"input": 9.25,
+				"output": "1001.01"
 			}
 		]
 	}
